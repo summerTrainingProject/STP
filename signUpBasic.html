@@ -81,19 +81,48 @@
 			background-color: #2ecc71;
 		}
 		</style>
+		<script type="text/javascript">
+			function Validation () {
+				// body...
+				if (document.getElementById('fname').value.trim()=="") 
+				{
+					alert("First name textbox is empty!!");
+					return false;
+				}
+				else if (document.getElementById('lname').value.trim()=="") 
+				{
+					alert("Last name textbox is empty!!");
+					return false;
+				}
+				else if (document.getElementById('email').value.trim()=="") 
+				{
+					alert("Email textbox is empty!!");
+					return false;
+				}
+				else if (document.getElementById('pswrd').value.trim()=="") 
+				{
+					alert("Password textbox is empty!!");
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+		</script>
 	</head>
 	<body>
-<form class="box" action="logInBasic" method="post">
-	<h1>Sign up</h1>
+<form class="box" onsubmit="return Validation()" action="logInBasic.html">
+	<h1 id="khara">Sign up</h1>
 	<h2>First name</h2>
-	<input type="text" placeholder="Your first name...">
+	<input type="text" id='fname' placeholder="Your first name..."  />
 	<h2>Last name</h2>
-	<input type="text" placeholder="Your last name...">
+	<input type="text" id='lname' placeholder="Your last name..."  />
 	<h2>Email</h2>
-	<input type="text" placeholder="Your email...">
+	<input type="text" id='email' placeholder="Your email..."  />
 	<h2>Password</h2>
-	<input type="password" placeholder="Your password...">
-	<input type="submit" value="Sign Up">
+	<input type="password" id="pswrd" placeholder="Your password..."  />
+	<input type="submit" value="Sign Up"/>
 </form>
 </body>
 </html>
