@@ -81,9 +81,28 @@
 			background-color: #2ecc71;
 		}
 		</style>
+		<script type="text/javascript">
+			function Validation () {
+				// body...
+				if (document.getElementById('email').value.trim()=="") 
+				{
+					alert("Email textbox is empty!!");
+					return false;
+				}
+				else if (document.getElementById('pswrd').value.trim()=="") 
+				{
+					alert("Password textbox is empty!!");
+					return false;
+				}
+				else
+				{
+					return true;
+				}
+			}
+		</script>
 	</head>
 	<body>
-<form class="box" action="logOutBasic" method="post">
+<form class="box" onsubmit="Validation()" action="logOutBasic.html" method="post">
 	<h1>Login</h1>
 	<h2>Email</h2>
 	<input type="text" placeholder="Your email...">
