@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Log out</title>
+    <style>
+  		body
+  		{
+  			font-family: Tajawal;
+  		}
+  		.box
+  		{
+  			width: 300;
+  			padding:  40px;
+  			position: fixed;
+  			top: 50%;
+  			left: 50%;
+  			transform: translate(-50% , -50%);
+  			background: white;
+  			text-align: center;
+  		}
+  		.box h1
+  		{
+  			color: black;
+  			text-transform: uppercase;
+
+  		}
+  		.box h2
+  		{
+  			text-align: left;
+  			margin-bottom: 0px;
+  		}
+  		.box input[type="button"],input[type="submit"]
+  		{
+  			font-size: 16px;
+  			font-weight: bold;
+  			font-family: Tajawal;
+  			border: 0;
+  			background: none;
+  			margin: 20px;
+  			text-align: center;
+  			border: 2px solid #707070;
+  			padding: 14px 5px;
+  			width: 90px;
+  			outline: none;
+  			color: black;
+  			border-radius: 30px;
+  			transition: 0.25s;
+  			cursor: pointer;
+  		}
+  		.box input[type="button"]:hover
+  		{
+  			color: white;
+  			border-color: #ff4d4d;
+  			background-color: #ff4d4d;
+  		}
+      .box input[type="submit"]:hover
+  		{
+  			color: white;
+  			border-color: #2ecc71;
+  			background-color: #2ecc71;
+  		}
+  		</style>
+    </head>
+  <body>
+    <form class="box" action="logIn.html">
+      <h1> Are you sure that you want to log out ?</h1>
+      <input type="submit" name="Yes" value="Yes">
+      <input type="button" name="No" value="No"onclick="window.location.href='mainforLaptops.html'">
+    </form>
+  </body>
+</html>
